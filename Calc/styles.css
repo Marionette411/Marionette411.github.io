@@ -1,0 +1,50 @@
+.centered
+{
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.brd
+{
+  border: 1px solid black; padding: 20px;
+}
+
+.btn
+{
+  background-color: #e7e7e7;
+  border: 1px solid black;
+  color: black;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 50%;
+}
+
+.dsp
+{
+  border: none; padding: 3px;
+  outline: none;
+  font-size: 20px;
+  width: 75%;
+}
+
+#main
+{
+  padding: 12px;
+  border-radius: 12px;
+  height: 580px;
+  width: 600px;
+}
+
+tr
+{
+  line-height: 0.5;
+}
+
+input[type=button]:hover {
+  border: 2px solid black;
+}
+
+input[type=button]:active {
+  border: 2px solid yellow;
+}

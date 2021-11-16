@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Turing Machine</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="UI.js"></script>
+  <script src="work.js"></script>
+</head>
+
+<body style="font-family: Arial, sans-serif;">
+  <div id="desc">
+    <center><h2><u>Turing Machine</u></h2><br><form id="descF">
+      <table cellspacing="5" cellpadding="15">
+      <tr><td>
+        <b>Tape Symbols</b><br>(Excluding symbol for blank)<br>(Enter seperated by ,(comma))
+      </td><td>
+        <b>: </b><input id="tp" onkeypress="return noenter()" type="text" autocomplete="off" size="20" placeholder="Symbols"><br><br>
+      </td></tr>
+      <tr><td>
+        <b>Symbol for blank</b><br>(Default is whitespace)
+      </td><td>
+        <b>: </b><input id="bk" onkeypress="return noenter()" type="text" autocomplete="off" size="10" placeholder="Blank"><br><br>
+      </td></tr>
+      <tr><td>
+        <b>No. of States</b>
+      </td><td>
+        <b>: </b><input id="st" onkeypress="return noenter()" type="text" autocomplete="off" size="5" maxlength="2" placeholder="States"><br><br>
+      </td></tr>
+      <tr><td>
+        <b>Format of Transition Function</b>
+      </td><td>
+        <b>: </b><select id="frmt" style="padding: 5px;">
+          <option value="xds" selected>(Symbol, Direction, State)</option>
+          <option value="xsd">(Symbol, State, Direction)</option>
+          <option value="sxd">(State, Symbol, Direction)</option>
+        </select><br><br>
+      </td></tr>
+      </table>
+      <input type="button" value="Create Machine" onclick="tableInput(false); clr('all');">
+    </form></center>
+  </div>
+
+  <div id="table">
+    <script>document.getElementById("table").style.display="none"</script>
+    <center><h2><u>Enter Transition Table</u></h2>
+      <p style="color: red; font-size: 20px">
+        <b>NOTE: </b>
+        Enter Transition Function based on the selected format <b>(Don't Include Brackets)</b><br>
+      </p>
+      <form id="tableF">
+      <br><table id="t_ip" cellpadding="5"></table>
+      <br><br>Initial State: <input id="inl" onkeypress="return noenter()" type="text" autocomplete="off" size="5" placeholder="Initial">
+      &emsp;Final State: <input id="fnl" onkeypress="return noenter()" type="text" autocomplete="off" size="5" placeholder="Final">
+      <br><br><input type="button" value="Validate String" onclick="tableOutput()">
+      &emsp;<input type="button" value="Edit Parameters" onclick="toggle('table','desc')">
+    </form></center>
+  </div>
+
+  <div id="disp">
+    <script>document.getElementById("disp").style.display="none"</script>
+    <center><h2><u>Transition Table</u></h2><form id="dispF">
+      <table id="t_op" border="1" cellspacing="0" width="80%">
+      </table>
+      <br><input type="button" value="Edit Table" onclick="tableInput(true)">
+      <br><p>
+        <h3>Enter String for validation</h3>
+        <input id="ck" onkeypress="return noenter()" type="text" autocomplete="off" size="30" placeholder="String" style="font-size: 15px">&emsp;
+      <input type="button" value="Check" onclick="validate();"></p>
+    </form></center>
+  </div>
+
+  <div id="op">
+    <script>document.getElementById("op").style.display="none"</script>
+    <center><h2><u>Output</u></h2><form id="opF">
+      <p id="res"></p>
+      <br><br><input type="button" value="Validate another String" onclick="toggle('op','disp'); clr('dispF');">
+      &emsp;<input type="button" value="Create Another Machine" onclick="toggle('op','desc'); clr('descF');">
+    </form></center>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+div.gallery {
+margin: 5px;
+border: 1px solid #444;
+width: 180px;
+overflow: hidden;
+}
+
+div.gallery:hover {
+border: 2px solid #ccc;
+border-radius: 10px;
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+}
+
+div.desc {
+color:#bbb;
+padding: 15px;
+text-align: center;
+font-family: Arial, sans-serif;
+}
+
+.txt
+{
+  color:#ccc;
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+}
+
+a:link,  a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+}
+
+td
+{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

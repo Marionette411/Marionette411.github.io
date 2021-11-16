@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Calculator</title>
+  <script src="calculate.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="main" class="centered brd">
+    <table cellspacing="0" height="100%" width="100%">
+      <tr>
+        <th colspan="2" class="brd">
+          <form name="calc">
+          <input name="ip" type="text" maxlength="200" size="35" class="dsp" readonly>
+          <br>
+          <input name="op" type="text" maxlength="200" size="35" class="dsp" style="text-align: right;" readonly>
+          </form>
+        </th>
+      </tr>
+      <tr>
+        <th class="brd">
+          <input type="button" class="btn" value="7" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="8" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="9" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="4" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="5" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="6" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="1" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="2" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="3" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="0" onclick="expr(value)">
+        </th>
+        <th class="brd">
+          <input type="button" class="btn" value="(" style="padding: 14px 22px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value=")" style="padding: 14px 22px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="C" style="background-color: #f44336;color: white;" onclick="clr()"> <br><br>
+          <input type="button" class="btn" value="+" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="-" style="padding: 14px 22px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="x" style="padding: 15px 22px;" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="/" style="padding: 14px 23px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value=" . " style="padding: 14px 18px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="Ans" style="padding: 15px 10px;" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="<<" style="padding: 14px 18px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value=">>" style="padding: 14px 18px;" onclick="expr(value)"> <br><br>
+          <input type="button" class="btn" value="<=" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value=" ^ " style="padding: 14px 18px;" onclick="expr(value)"> &emsp;
+          <input type="button" class="btn" value="=" onclick="res()">
+        </th>
+      </tr>
+      <tr>
+        <th class="brd">
+          <input type="button" class="btn" value=" &pi; " style="padding: 10px 12px;" onclick="expr('π')"> &nbsp;
+          <input type="button" class="btn" value="sin" style="padding: 10px 12px;" onclick="expr(value)"> &nbsp;
+          <input type="button" class="btn" value="cos" style="padding: 10px 12px;" onclick="expr(value)"> &nbsp;
+          <input type="button" class="btn" value="tan" style="padding: 10px 12px;" onclick="expr(value)">
+        </th>
+        <th class="brd">
+          <input type="button" class="btn" value="M+" style="padding: 10px 12px;" onclick="expr(value)"> &nbsp;
+          <input type="button" class="btn" value="M-" style="padding: 10px 12px;" onclick="expr(value)"> &nbsp;
+          <input type="button" class="btn" value="MR" style="padding: 10px 12px;" onclick="expr(value)"> &nbsp;
+          <input type="button" class="btn" value="MC" style="padding: 10px 12px;" onclick="expr(value)">
+        </th>
+      </tr>
+    </table>
+  </div>
+</body>

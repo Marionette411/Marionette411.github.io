@@ -1,0 +1,41 @@
+div
+{
+  font-size: 23px
+}
+
+#t_op
+{
+  font-size: 17px;
+  text-align: right;
+}
+
+.pad
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#res
+{
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 1.7;
+}
+
+input[type=button]  {
+  background-color: #666;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+input[type=button]:hover {
+  border: 2px solid black;
+}
