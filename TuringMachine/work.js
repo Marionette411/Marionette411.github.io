@@ -6,7 +6,7 @@ function check()
 {
   keys=[]
   for(i in tb)  keys.push(i)
-  console.log(keys)
+  //console.log(keys)
 
   for(i in tb)
   {
@@ -39,7 +39,7 @@ function createDict()
   if(inl.length<1) { alert("Please Enter Initial State"); return false; }
   fnl=document.getElementById("fnl").value
   if(fnl.length<1) { alert("Please Enter Final State"); return false; }
-  console.log(inl+" "+fnl)
+  //console.log(inl+" "+fnl)
   c=0
   for(i in tb)
   {
@@ -53,7 +53,7 @@ function createDict()
 
 function dirc(d)
 {
-  console.log(d)
+  //console.log(d)
   if('Rr'.indexOf(d)>=0)
     head+=1;
   else if('Ll'.indexOf(d)>=0)
@@ -93,7 +93,7 @@ function validate()
    while(true)
    {
      rd=tb[st][w[head]].split(',')
-     console.log(rd)
+     //console.log(rd)
      if (rd.length<3)
      {
        x+="<span style=\"white-space: nowrap;\"><b>"+w.slice(0,head)+"</b><font size=\"4\" color=\"red\">"+st+"</font><b>"+w.slice(head)+"</span></b><br>"

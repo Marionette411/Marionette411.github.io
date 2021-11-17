@@ -7,10 +7,10 @@ function clr(nm)
 {
   if(nm=='all') nm=['tableF','dispF','opF']
   else nm=new Array(nm)
-  console.log(nm)
+  //console.log(nm)
   for(i of nm)
   {
-    console.log(i)
+    //console.log(i)
     document.getElementById(i).reset();
   }
 }
@@ -33,10 +33,10 @@ function tableInput(edit)
   blank=document.getElementById("bk").value
   if(blank.length<1) blank=" "
   tape.push(blank)
-  console.log(tape)
+  //console.log(tape)
   states=document.getElementById("st").value
   frmt=document.getElementById("frmt").value
-  console.log(frmt)
+  //console.log(frmt)
   x="<tr>"
   for(i=-1;i<tape.length;i++)
   {
